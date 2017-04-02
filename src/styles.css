@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+.center-block {
+    float: none !important
+    }
+
+.div-content{
+    background-color: #125643;
+    color: #ffffff;
+}

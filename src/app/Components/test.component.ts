@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TestComponent implements OnInit {
-    constructor() { }
+    public apiUrl = "";
+    public result = "test";
+
+    constructor() {
+    }
 
     ngOnInit() { }
+
+    public getInfo() {
+        this.result = this.apiUrl + "\n" + this.result;
+    }
 }
