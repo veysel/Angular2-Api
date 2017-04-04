@@ -6,12 +6,17 @@
 <div class="container">
     <div class="row">
         <div>
-            <input [(ngModel)]="apiUrl" (keyup)="getInfo()" class="col-lg-6 col-md-8 col-sm-8 col-xs-8 center-block" type="text" placeholder="Api Url" />
+            <input [(ngModel)]="apiUrl" (keyup)="getInfo()" class="col-lg-6 col-md-8 col-sm-8 col-xs-8 center-block" type="text" placeholder="Api Url"
+            />
         </div>
         <br>
         <div class="div-content">
             <span class="col-lg-6 col-md-8 col-sm-8 col-xs-8 center-block">
-                {{result}}
+                <pre class="prettyprint">
+                    <code class="prettyprint">
+                        {{result}}
+                    </code>
+                </pre>
             </span>
         </div>
     </div>
