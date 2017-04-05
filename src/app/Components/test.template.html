@@ -10,14 +10,26 @@
             />
         </div>
         <br>
-        <div class="div-content">
-            <span class="col-lg-6 col-md-8 col-sm-8 col-xs-8 center-block">
-                <pre class="prettyprint">
-                    <code class="prettyprint">
-                        {{result}}
-                    </code>
-                </pre>
+    </div>
+    <div class="row">
+        <div class="div-content col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label>Sonuç</label>
+            <span>
+                <pre class="prettyprint"><code class="prettyprint">{{result}}</code></pre>
             </span>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label>Log</label>
+            <span>
+                <pre class="prettyprint"><code class="prettyprint">{{log}}</code></pre>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <span class="pull-right"><h6>Toplam Yapılan Sorgu : {{count}}</h6></span>
         </div>
     </div>
 </div>
