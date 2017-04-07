@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TestService } from '../Services/test.service';
+import { CommonService } from '../../Services/Common/common.service';
 
 @Component({
-    selector: 'test',
-    templateUrl: './test.template.html'
+    selector: 'main',
+    templateUrl: './main.template.html'
 })
 
-export class TestComponent implements OnInit {
+export class MainComponent implements OnInit {
     public apiUrl = "";
     public result: any;
     public log: any;
     public count: any;
 
     constructor(
-        private _testService: TestService
+        private _commonService: CommonService
     ) {
         this.getCount();
     }
@@ -22,11 +22,11 @@ export class TestComponent implements OnInit {
     ngOnInit() { }
 
     public getInfo() {
-        this._testService.getInfo(this.apiUrl).subscribe(
+        this._commonService.getInfo(this.apiUrl).subscribe(
             data => {
                 this.log = "Başarılı";
                 this.result = JSON.stringify(data);
-                this._testService.updateCount(parseInt(this.count) + 1).subscribe(x => { this.getCount(); });
+                this._commonService.updateCount(parseInt(this.count) + 1).subscribe(x => { this.getCount(); });
             },
             error => {
                 this.result = "";
@@ -36,6 +36,6 @@ export class TestComponent implements OnInit {
     }
 
     public getCount() {
-        this._testService.getCount().subscribe(data => { this.count = data.sayac; });
+        this._commonService.getCount().subscribe(data => { this.count = data.sayac; });
     }
 }

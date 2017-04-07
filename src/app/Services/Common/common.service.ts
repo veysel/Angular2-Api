@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
 @Injectable()
-export class TestService {
+export class CommonService {
     private countUrl = "https://api.myjson.com/bins/12mz97";
     private headers: Headers;
 

@@ -5,21 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { TestComponent } from './Components/test.component'
+import { MainComponent } from './Components/Main/main.component'
 
-import { TestService } from './Services/test.service'
+import { CommonService } from './Services/Common/common.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    MainComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [TestService],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
