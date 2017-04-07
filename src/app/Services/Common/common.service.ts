@@ -17,7 +17,6 @@ export class CommonService {
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
         this.headers.append('Access-Control-Allow-Origin', '*');
-
     }
 
     public getInfo(apiUrl: string) {
@@ -31,5 +30,4 @@ export class CommonService {
     public updateCount(count) {
         return this._http.put(this.countUrl, { sayac: count }).map(x => x.json());
     }
-
 }
