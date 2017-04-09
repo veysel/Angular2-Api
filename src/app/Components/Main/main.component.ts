@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
             data => {
                 this.log = "Başarılı";
                 this.result = JSON.stringify(data);
-                this._commonService.updateCount(parseInt(this.count) + 1).subscribe(x => { this.getCount(); });
+                this.increaseCount();
             },
             error => {
                 this.result = "";
@@ -37,5 +37,12 @@ export class MainComponent implements OnInit {
 
     public getCount() {
         this._commonService.getCount().subscribe(data => { this.count = data.sayac; });
+    }
+
+    public increaseCount() {
+        this._commonService.getCount().subscribe(data => {
+            let newCount = parseInt(data.sayac) + 1;
+            this._commonService.updateCount(newCount).subscribe(x => { this.getCount(); });
+        });
     }
 }
