@@ -12,6 +12,7 @@ export class MainComponent implements OnInit {
     public result: any;
     public log: any;
     public count: any;
+    public time: any;
 
     constructor(
         private _commonService: CommonService
@@ -22,11 +23,15 @@ export class MainComponent implements OnInit {
     ngOnInit() { }
 
     public getInfo() {
+        let timeBegin = Date.now();
         this._commonService.getInfo(this.apiUrl).subscribe(
             data => {
+                let timeEnd = Date.now();
+
                 this.log = "Başarılı";
                 this.result = JSON.stringify(data);
                 this.increaseCount();
+                this.timeDisplay(timeBegin, timeEnd);
             },
             error => {
                 this.result = "";
@@ -45,4 +50,10 @@ export class MainComponent implements OnInit {
             this._commonService.updateCount(newCount).subscribe(x => { this.getCount(); });
         });
     }
+
+    public timeDisplay(timeBegin, timeEnd) {
+        let diff = timeEnd - timeBegin;
+        this.time = diff.toString() + " ms";
+    }
+
 }
