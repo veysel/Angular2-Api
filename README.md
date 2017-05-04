@@ -7,11 +7,11 @@ http://apitestet.com
 ## Use
 
 ```
-git clone https://github.com/veysel/Angular2-Api
+$ git clone https://github.com/veysel/Angular2-Api
 
-cd Angular2-Api
+$ cd Angular2-Api
 
-ng serve
+$ ng serve
 
 -- Open browser url link localhost:4200
 ```
