@@ -1,3 +1,19 @@
-Angular2 Api
+# Angular 2 Api
 
-Api Test Et
+## Use
+
+```
+git clone https://github.com/veysel/Angular2-Api
+
+cd Angular2-Api
+
+ng serve
+
+-- Open browser url link localhost:4200
+```
+
+## Dependencies
+
+```
+- Angular-Cli
+```
