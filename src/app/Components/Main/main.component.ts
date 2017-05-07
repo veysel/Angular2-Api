@@ -57,8 +57,7 @@ export class MainComponent implements OnInit {
     }
 
     public timeDisplay(timeBegin, timeEnd) {
-        let diff = timeEnd - timeBegin;
-        this.time = diff.toString() + " ms";
+        this.time = (timeEnd - timeBegin).toString() + " ms";
     }
 
 }
