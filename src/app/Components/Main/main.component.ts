@@ -8,7 +8,7 @@ import { CommonService } from '../../Services/Common/common.service';
 })
 
 export class MainComponent implements OnInit {
-    public apiUrl = "";
+    public apiUrl: string;
     public result: any;
     public log: any;
     public count: any;
@@ -17,6 +17,7 @@ export class MainComponent implements OnInit {
     constructor(
         private _commonService: CommonService
     ) {
+        this.apiUrl = "";
         this.getCount();
     }
 
