@@ -22,7 +22,9 @@ export class MainComponent implements OnInit {
         this.getCount();
     }
 
-    ngOnInit() { }
+    ngOnInit() {
+        console.clear();
+    }
 
     public getInfo() {
         let timeBegin = Date.now();
@@ -38,6 +40,7 @@ export class MainComponent implements OnInit {
             error => {
                 this.result = "";
                 this.log = error;
+                console.clear();
             }
         );
     }
