@@ -18,6 +18,7 @@ export class MainComponent implements OnInit {
         private _commonService: CommonService
     ) {
         this.apiUrl = "";
+        this.time = "0";
         this.getCount();
     }
 
